@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: blue;
+    display: flex;
+    justify-content: center  ;
+}
+#area{
+    background: white;
+    width: 400px;
+    aspect-ratio: 1;
+    margin-top: 100px;
+    overflow: hidden;
+    
+    
+}
+
+
+#object{
+    background: orangered;
+    width: 60px;
+    aspect-ratio: 1;
+    transform: translateY(-100%);
+    position: relative;
+}
+#object.is-moving{
+    animation-name:movement;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes movement {
+    to{
+        transform: translateY(400px);
+    }
+    
+}
